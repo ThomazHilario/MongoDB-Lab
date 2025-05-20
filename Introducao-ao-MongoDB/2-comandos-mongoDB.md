@@ -22,3 +22,9 @@
 ## Comandos para Deletar um ou mais dados no MongoDB (Delete):
 - db.collection.deleteOne({ _id:1 }): Deleta o registro de dado que tem o id 1.
 - db.collectiondeleteOne(): Deleta vários registro de dados com base no filtro passado.
+
+## Outros operadores:
+- $gte: Busca dados no qual tem o valor igual ou maior que.
+- $lte: Busca dados no qual tem o valor igual ou menor que.
+- $ne: Tras dados com valores diferentes do escolhido pelo operador.
+- $exist: Retorna dados que possuem determinado campo
