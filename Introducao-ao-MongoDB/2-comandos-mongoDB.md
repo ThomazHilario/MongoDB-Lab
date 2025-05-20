@@ -18,3 +18,7 @@
 - db.collection.updateMany({categories: "react", { $set: { property: "new value" } }}): Atualiza a propriedade de todos os dados do mongoDB que pertencem a categoria react.
 - db.collection.replaceOne({ _id:120 }, {name: "new name"}): Troca os dados existentes de uma registro por outro.
 - db.collection.updateOne({ -id:120 }, {$push: {categories: "value"}}): Atualiza uma propriedade que é um array, adicionando o novo valor a este array.
+
+## Comandos para Deletar um ou mais dados no MongoDB (Delete):
+- db.collection.deleteOne({ _id:1 }): Deleta o registro de dado que tem o id 1.
+- db.collectiondeleteOne(): Deleta vários registro de dados com base no filtro passado.
