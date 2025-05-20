@@ -12,3 +12,9 @@
 - db.collection.find({value: {$lt:10}}): Busca dados no qual a propriedade value seja menor que 10. O fator determinante para isso é o operador $lt
 - db.collection.find($or: [{value: {$gt: 10}}, {value: {$lt: 50}}]): Buscar dados com base no operador $or, que busca dados com base entre um valor e outro.
 - Obs: Para visualizar os dados formatados podemos utilizar o método pretty() depois do método de busca. (Uso no terminal)
+
+## Comandos para Atualizar um ou mais dados no MongoDB (Update):
+- db.collection.updateOne({_id: 1}, {$set: { property: "new value" }}): Atualizando um registro no MongoDB.
+- db.collection.updateMany({categories: "react", { $set: { property: "new value" } }}): Atualiza a propriedade de todos os dados do mongoDB que pertencem a categoria react.
+- db.collection.replaceOne({ _id:120 }, {name: "new name"}): Troca os dados existentes de uma registro por outro.
+- db.collection.updateOne({ -id:120 }, {$push: {categories: "value"}}): Atualiza uma propriedade que é um array, adicionando o novo valor a este array.
