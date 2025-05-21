@@ -28,3 +28,6 @@
 - $lte: Busca dados no qual tem o valor igual ou menor que.
 - $ne: Tras dados com valores diferentes do escolhido pelo operador.
 - $exist: Retorna dados que possuem determinado campo
+
+### OBS:
+- Todos os comandos acima são muito mais utilizados no terminal do que em sí em um código, claro que alguns dos comandos acima irão se assemelhar durante o desenvolvimento de uma api utilizando linguagens de programação.

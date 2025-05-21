@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { UsersService } from 'src/mongo/users.service';
 import { JwtService } from '@nestjs/jwt';
-import 'dotenv/config'
 import { LoginUserDTO, UsersDTO } from 'src/mongo/dto/users.dto';
+import 'dotenv/config'
 
 @Injectable()
 export class AuthService {
@@ -22,13 +22,7 @@ export class AuthService {
                 })
 
                 // Return token
-                return {
-                    token,
-                    data:{
-                        username: user.username,
-                        email: user.email
-                    }
-                }
+                return { token }
             }
             
             throw new Error('Não foi possível criar o usuário')
@@ -50,13 +44,7 @@ export class AuthService {
                     email: user.email
                  })
 
-                return {
-                    token,
-                    data:{
-                        username: user.username,
-                        email: user.email
-                    }
-                }
+                return { token }
             }
 
             throw new Error('User not found!')
@@ -69,13 +57,6 @@ export class AuthService {
     }
 
     verifyToken(token:string){
-        try {
-            if(this.jwtService.verify(token)){
-                return true
-            }
-            return false
-        } catch (error) {
-            return error
-        }
+        return this.jwtService.verify(token)
     }
 }
